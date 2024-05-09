@@ -67,7 +67,7 @@ export class UsersController {
       throw new ServerException(ErrorCode.UserNotFound);
     }
 
-    return await this.usersService.findUserWishes(Number(user.id));
+    return await this.usersService.findUserWishes(user.id);
   }
 
   @Post('find')
